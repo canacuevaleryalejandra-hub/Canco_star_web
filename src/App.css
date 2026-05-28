@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #76D7C4;
+    color: #00796B;
+    padding: 10px 37px;
+
+}
+
+.logo {
+    font: size 50px;
+    font-weight: bold;
+}
+
+.header a {
+    color: #2D9966;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.header a:hover {
+    color: bisque;
+}
+
+.conten-logo {
+    display: flex;
+}
+
+.img-logo {
+    width: 60px;
+}
+
+.hero {
+    margin-top: 5px;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(90deg, rgb(28, 76, 95) 0%,
+            rgb(45, 108, 71) 50%, rgb(210, 207, 179) 100%);
+    color: aliceblue;
+}
+.btn{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(189, 238, 174);
+    color: #639857;
+    border: none;
+}
+.btn:hover{
+    background-color: aliceblue;
+}
+.contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.contenedor-1 {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+}
+/* 
+   ESTILOS PARA EL CONTENEDOR 2
+   Este contenedor es el <div>
+*/
+/* Contenedor de las tarjetas */
+.contenedor-2 {
+  background: linear-gradient(135deg, #4e4f4e, #2c2d2c);/*Fondo del componente, en este caso en gradiente */
+  width: 280px;/*  */
+  height: auto;/* Alto componente, si quieren poner un alto específico height: 20vh; o height: auto; */
+  margin: 15px;/* margen del componente o espacio entre componentes */
+  padding: 20px;
+  border-radius: 18px;/* Los bordes redondeados del componente */
+  /* sombra de las tarjetas */
+  box-shadow:0px 8px 20px rgba(0, 0, 0, 0.52);
+  /* transición para efectos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* centrado interno */
+  display: flex;
+  flex-direction: column;/* Direccion del contenido en columna */
+  justify-content: center;
+  align-items: center;
+}
+
+/* efecto hover para modificar un componente (cuando pasas el mouse) */
+/* Nos permite modificar el componente cuando el usuario pasa el mouse sobre él */
+.contenedor-2:hover {
+  transform: translateY(-8px) scale(1.03);/* Al pasar el mause, el componente se mueve hacia arriba y sobresale un  poco */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+ 
+/* texto */
+.contenedor-2 p {
+  text-align: center;
+  color: #ffffff;
+}
