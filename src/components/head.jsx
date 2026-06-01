@@ -2,14 +2,14 @@ export function Head() {
   return (
     <header className="header">
       <div className="conten-logo">
-        <img 
+        <img
           className="img-logo"
-          src="/CANCO STAR.jpeg" 
+          src="/CANCO STAR.jpeg"
           alt="CANCO STAR Logo"
         />
-        <h1 className="logo">CANCO STAR</h1> 
+        <h1 className="logo">CANCO STAR</h1>
       </div>
-      
+
       <nav>
         <a href="#inicio">INICIO</a>
         <a href="#historia">NUESTRA HISTORIA</a>
