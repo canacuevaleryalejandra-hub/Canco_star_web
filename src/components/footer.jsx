@@ -73,7 +73,7 @@ export function Footer() {
       
       {/* Copyright - actualiza el anio */}
       <div className="footer-bottom">
-        <p>&copy; 2024 CANCO STAR. Todos los derechos reservados.</p>
+        <p>&copy; 2026 CANCO STAR. Todos los derechos reservados.</p>
       </div>
     </footer>
   );
