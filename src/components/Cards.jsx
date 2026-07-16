@@ -21,7 +21,7 @@ const cardsData = [
   {
     id: 4,
     title: "El Paraiso Huilense",
-    image: "/public/campo.jpeg",
+    image: "./public/campo.jpeg",
     description: "Paisajes unicos de las montanas del Huila, donde nuestro cafe crece entre valles y neblina."
   }
 ];
