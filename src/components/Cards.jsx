@@ -3,7 +3,7 @@ const cardsData = [
   {
     id: 1,
     title: "Semilleros de Cafe",
-    image: "/public/semilleros-cafe.png",
+    image: "./semilleros-cafe.png",
     description: "Cultivamos nuestras plantas desde semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra."
   },
   {
