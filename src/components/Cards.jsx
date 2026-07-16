@@ -9,19 +9,19 @@ const cardsData = [
   {
     id: 2,
     title: "Nuestros Campesinos",
-    image: "/public/campesinos.png",
+    image: "./campesinos.png",
     description: "Familias cafeteras con generaciones de experiencia, llevando la tradicion del cafe huilense en cada grano."
   },
   {
     id: 3,
     title: "Cabañas Cafeteras",
-    image: "/public/cabañas.png",
+    image: "./cabañas.png",
     description: "Espacios acogedores rodeados de naturaleza, donde el cafe se vive y se respira en cada rincon."
   },
   {
     id: 4,
     title: "El Paraiso Huilense",
-    image: "./public/campo.jpeg",
+    image: "./campo.jpeg",
     description: "Paisajes unicos de las montanas del Huila, donde nuestro cafe crece entre valles y neblina."
   }
 ];
