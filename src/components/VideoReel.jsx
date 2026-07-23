@@ -4,7 +4,7 @@ export function VideoReel() {
       <div className="reel-wrapper">
         <video
           className="reel-video"
-          src="/reel-cafe.mp4"
+          src="/Reel-Canco.mp4"
           autoPlay
           loop
           muted
