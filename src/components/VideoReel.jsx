@@ -7,6 +7,7 @@ export function VideoReel() {
                     src="/Reel-Canco.mp4"
                     autoPlay
                     loop
+                    muted
                     playsInline
                     preload="auto"
                 />

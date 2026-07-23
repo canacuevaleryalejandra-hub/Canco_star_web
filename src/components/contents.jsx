@@ -1,4 +1,5 @@
 import { Cards } from "./Cards";
+import { VideoReel } from "./VideoReel";
 
 export function Contents() {
   return (
@@ -11,7 +12,7 @@ export function Contents() {
       </section>
 
       {/* Video Reel */}
-      <VideoReel />
+      < VideoReel />
 
       {/* Sección de Tarjetas */}
       <Cards />
