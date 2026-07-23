@@ -10,6 +10,9 @@ export function Contents() {
         <button className="btn">Conoce nuestro cafe</button>
       </section>
 
+      {/* Video Reel */}
+      <VideoReel />
+
       {/* Sección de Tarjetas */}
       <Cards />
     </main>
