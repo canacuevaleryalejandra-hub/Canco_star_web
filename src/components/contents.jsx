@@ -1,4 +1,5 @@
 import { Cards } from "./Cards";
+import { VideoReel } from "./VideoReel";
 
 export function Contents() {
   return (
@@ -9,6 +10,9 @@ export function Contents() {
         <p>CANCO STAR - Cafe de Especialidad</p>
         <button className="btn">Conoce nuestro cafe</button>
       </section>
+
+      {/* Video Reel */}
+      <VideoReel />
 
       {/* Sección de Tarjetas */}
       <Cards />
