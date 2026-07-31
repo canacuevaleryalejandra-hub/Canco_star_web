@@ -15,7 +15,7 @@ const cardsData = [
   {
     id: 3,
     title: "La Finca",
-    image: "./cabañas.png",
+    image: "./Doggy.jpeg",
     description: "El epicentro mágico y nuestra principal fuente de producción, rodeada de maravillosos paisajes que gritan tradición, naturaleza y vida a los cuatro vientos."
   },
   {
