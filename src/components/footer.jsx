@@ -39,9 +39,9 @@ export function Footer() {
           
           {/* Redes Sociales - cambia los # por tus enlaces */}
           <div className="social-links">
-            <a href="#" className="social-link" aria-label="Facebook">FB</a>
-            <a href="#" className="social-link" aria-label="Instagram">IG</a>
-            <a href="#" className="social-link" aria-label="WhatsApp">WA</a>
+            <a href="https://www.facebook.com/share/1cWX9oVyHB/?mibextid=wwXIfr" className="social-link" aria-label="Facebook">FB</a>
+            <a href="https://www.instagram.com/cancocafe?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="social-link" aria-label="Instagram">IG</a>
+            <a href="https://www.tiktok.com/@cancostar?_r=1&_t=ZS-98VF1vb8Mjd" className="social-link" aria-label="TikTok">TK</a>
           </div>
         </div>
 
