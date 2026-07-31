@@ -7,8 +7,8 @@ export function Contents() {
       {/* Sección Hero */}
       <section className="hero" id="inicio">
         <h2>Bienvenidos a</h2>
-        <p>CANCO STAR - Cafe de Especialidad</p>
-        <button className="btn">Conoce nuestro cafe</button>
+        <p>CANCO STAR - Café de Especialidad y Herencia</p>
+        <button className="btn">Conoce nuestro café</button>
       </section>
 
       {/* Video Reel */}
