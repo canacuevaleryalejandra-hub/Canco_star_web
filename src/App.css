@@ -359,21 +359,35 @@ body {
 }
 
 .social-link {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* Colorimetría de la marca: círculo verde claro, ícono verde oscuro */
+  background-color: #d4e8d1;
+  color: #1c4c5f;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.social-link:hover {
-  background-color: rgba(255, 255, 255, 0.25);
+.social-link svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  /* Al pasar el cursor se invierte: círculo verde oscuro, ícono verde claro */
+  background-color: #2d6c47;
+  color: #d4e8d1;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 /* Línea divisora del footer */
