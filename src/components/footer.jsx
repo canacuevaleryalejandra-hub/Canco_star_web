@@ -23,22 +23,23 @@
      - Actualiza el anio y nombre de empresa
 */}
 
+import { Link } from "react-router-dom";
+import { useLanguage } from "../i18n/language";
+
+// Los textos del footer se editan en src/i18n (sección "footer" de cada idioma)
 export function Footer() {
+  const { t } = useLanguage();
   return (
-    <footer className="footer">
+    <footer className="footer" id="contacto-star">
       <div className="footer-content">
         
         {/* COLUMNA 1: Informacion de la empresa */}
         <div className="footer-column">
           <h3>CANCO STAR</h3>
-          <p>
-            Somos una empresa cafetera Aceveduna, nacida en el seno de la 
-            familia Canacue-Collazos. Producimos cafe de especialidad con 
-            amor y tradición desde las montañas del Huila.
-          </p>
+          <p>{t("footer.descripcion")}</p>
           
           {/* Redes Sociales - cambia los # por tus enlaces */}
-          <div className="social-links">
+          <div className="social-links" id="redes">
             <a
               href="https://www.facebook.com/share/1cWX9oVyHB/?mibextid=wwXIfr"
               className="social-link"
@@ -78,22 +79,22 @@ export function Footer() {
 
         {/* COLUMNA 2: Enlaces rapidos */}
         <div className="footer-column">
-          <h3>Enlaces</h3>
+          <h3>{t("footer.enlaces")}</h3>
           <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#historia">Nuestra Historia</a></li>
-            <li><a href="#procesos">Procesos</a></li>
-            <li><a href="#">Tienda</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><Link to="/#inicio">{t("footer.inicio")}</Link></li>
+            <li><Link to="/#familia">{t("footer.historia")}</Link></li>
+            <li><Link to="/#legado-y-tradicion">{t("footer.legado")}</Link></li>
+            <li><Link to="/tienda">{t("footer.tienda")}</Link></li>
+            <li><Link to="/#contacto-star">{t("footer.contactoStar")}</Link></li>
           </ul>
         </div>
 
         {/* COLUMNA 3: Contacto */}
-        <div className="footer-column">
-          <h3>Contacto</h3>
+        <div className="footer-column" id="contacto">
+          <h3>{t("footer.contacto")}</h3>
           <ul>
             <li><a href="tel:+573138115079">+57 313 811 5079</a></li>
-            <li><a href="#">Acevedo, Huila - Colombia</a></li>
+            <li><a href="#">{t("footer.ubicacion")}</a></li>
           </ul>
         </div>
 
@@ -103,7 +104,7 @@ export function Footer() {
       
       {/* Copyright - actualiza el anio */}
       <div className="footer-bottom">
-        <p>&copy; 2026 CANCO STAR. Todos los derechos reservados.</p>
+        <p>&copy; 2026 CANCO STAR. {t("footer.derechos")}</p>
       </div>
     </footer>
   );

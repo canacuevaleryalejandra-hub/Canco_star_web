@@ -1,6 +1,9 @@
+import { useLanguage } from "../i18n/language";
+
 export function VideoReel() {
+    const { t } = useLanguage();
     return (
-        <section className="reel-section" aria-label="Video de nuestro cafe">
+        <section className="reel-section" id="reel" aria-label={t("reel.etiqueta")}>
             <div className="reel-wrapper">
                 <video
                     className="reel-video"
