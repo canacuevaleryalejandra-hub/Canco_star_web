@@ -143,6 +143,9 @@ const es = {
     contactoStar: "Contacto Star",
     contacto: "Contacto",
     ubicacion: "Acevedo, Huila - Colombia",
+    abrirMapa: "Abrir en el mapa",
+    mapaTitulo: "Mapa de Acevedo, Huila",
+    nuevaPestana: "se abre en una pestaña nueva",
     derechos: "Todos los derechos reservados.",
   },
 };

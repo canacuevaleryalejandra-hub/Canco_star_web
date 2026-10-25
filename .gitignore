@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Vercel CLI (datos del proyecto en Vercel; no van en el repositorio)
+.vercel

@@ -140,6 +140,9 @@ const zh = {
     contactoStar: "联系 Star",
     contacto: "联系方式",
     ubicacion: "哥伦比亚，乌伊拉，阿塞韦多",
+    abrirMapa: "在地图中打开",
+    mapaTitulo: "乌伊拉阿塞韦多地图",
+    nuevaPestana: "在新标签页中打开",
     derechos: "保留所有权利。",
   },
 

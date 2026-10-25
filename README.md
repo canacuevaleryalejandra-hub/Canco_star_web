@@ -1,18 +1,45 @@
- React + Vite
+# Canco Star
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sitio web de **Canco Star**, café de especialidad de la familia Canacue-Collazos, en Acevedo, Huila (Colombia).
 
-Currently, two official plugins are available:
+## Estructura
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+prueba-proyecto/
+├── frontend/   La página web (React + Vite). Es lo que se publica en Vercel.
+├── backend/    La API (PHP con Leaf) y lo relacionado con la base de datos MySQL "canco".
+├── vercel.json Le dice a Vercel que instale y compile desde frontend/.
+└── CLAUDE.md   Guía técnica del proyecto.
+```
 
-## React Compiler
+## Frontend (la página)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+cd frontend
+npm install      # solo la primera vez, o cuando cambien las dependencias
+npm run dev      # abre la página en http://localhost:5173
+npm run build    # versión final, en frontend/dist
+npm run lint     # revisa el código
+```
 
-## Expanding the ESLint configuration
+## Backend (la API)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# Canco_star_web" 
-"# Canco_star_web" 
+Necesita PHP 8.1+, Composer y MySQL (por ejemplo, con XAMPP).
+
+```bash
+cd backend
+composer install            # solo la primera vez: descarga las librerías en vendor/
+cp .env.example .env        # solo la primera vez: configuración local (no se sube a GitHub)
+php leaf serve              # inicia la API
+```
+
+- Rutas actuales: `GET /api/users` y `POST /api/users` (en `backend/app/routes/index.php`).
+- `GET /api/users` no devuelve las contraseñas, y `POST /api/users` las guarda encriptadas.
+- **Pendiente:** aplicar `backend/database/2026-10-25-contrasena-255.sql` en phpMyAdmin, para que la
+  columna de contraseñas tenga espacio para la versión encriptada.
+
+## Publicación
+
+El sitio se publica en Vercel desde este repositorio. `vercel.json`, en la raíz, indica que se instale y
+compile dentro de `frontend/` y que se publique `frontend/dist`. La API no se publica en Vercel: necesita
+un hosting con PHP y MySQL.

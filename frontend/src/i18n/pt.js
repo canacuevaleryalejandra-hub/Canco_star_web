@@ -139,6 +139,9 @@ const pt = {
     contactoStar: "Contato Star",
     contacto: "Contato",
     ubicacion: "Acevedo, Huila - Colômbia",
+    abrirMapa: "Abrir no mapa",
+    mapaTitulo: "Mapa de Acevedo, Huila",
+    nuevaPestana: "abre em uma nova aba",
     derechos: "Todos os direitos reservados.",
   },
 
