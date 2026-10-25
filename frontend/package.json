@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "traducciones": "node scripts/revisar-traducciones.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

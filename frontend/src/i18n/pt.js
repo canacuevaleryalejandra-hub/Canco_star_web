@@ -148,27 +148,15 @@ const pt = {
   textos: {
     // Legado y tradición
     "Procesos mágicos": "Processos Mágicos",
-    "Cultivamos nuestras plantas desde semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
-      "Cultivamos nossas plantas desde a semente, cuidando de cada etapa do crescimento com dedicação e amor pela terra, tanto que a magia floresce naturalmente.",
     "Semilleros de café": "Viveiros de café",
-    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para llegar a la tierra.":
-      "Tudo começa no viveiro. Ali escolhemos as melhores sementes e as acompanhamos durante suas primeiras semanas, até que estejam prontas para ir para a terra.",
-    "Después vienen la siembra, la floración y la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
-      "Depois vêm o plantio, a floração e a colheita à mão, grão por grão. Cada etapa é feita com paciência, porque sabemos que dela depende o que depois chega à sua xícara.",
     "La familia Star": "A Família Star",
     "Familias cafeteras con generaciones de experiencia, llevando la tradicion y berraquera del cafe huilense en cada grano.":
       "Famílias cafeeiras com gerações de experiência, levando a tradição e a garra do café do Huila em cada grão.",
     "Familia cafetera trabajando en el cultivo": "Família cafeeira trabalhando na lavoura",
-    "Detrás de cada bolsa de Canco Café hay una familia. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos.":
-      "Por trás de cada pacote de Canco Café há uma família. O conhecimento do café passou de geração em geração, dos avós para os pais e dos pais para os filhos.",
-    "Aquí puedes contar quiénes son, cómo empezó la tradición cafetera de la familia y qué significa para ustedes seguir trabajando la tierra.":
-      "Aqui você pode contar quem são, como começou a tradição cafeeira da família e o que significa para vocês continuar trabalhando a terra.",
     "La Finca": "A Fazenda",
     "El epicentro mágico y nuestra principal fuente de producción, rodeada de maravillosos paisajes que gritan tradición, naturaleza y vida a los cuatro vientos.":
       "O epicentro mágico e nossa principal fonte de produção, cercada de paisagens maravilhosas que gritam tradição, natureza e vida aos quatro ventos.",
     "Cabañas de la finca entre las montañas": "Cabanas da fazenda entre as montanhas",
-    "La finca es nuestro hogar y el corazón de Canco Café. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
-      "A fazenda é o nosso lar e o coração da Canco Café. Entre suas montanhas crescem os cafezais que dão origem a cada grão que chega à sua casa.",
     "Aquí puedes contar dónde queda, cómo es un día en la finca y qué la hace especial: su clima, su gente y los paisajes que la rodean.":
       "Aqui você pode contar onde fica, como é um dia na fazenda e o que a torna especial: seu clima, sua gente e as paisagens ao redor.",
     "El Paraiso Huilense": "O Paraíso do Huila",
@@ -177,9 +165,19 @@ const pt = {
     "Montañas del Huila": "Montanhas do Huila",
     "El Huila es tierra de café. Sus montañas, sus valles y su neblina le dan al grano un carácter que se reconoce en cada taza.":
       "O Huila é terra de café. Suas montanhas, seus vales e sua neblina dão ao grão um caráter que se reconhece em cada xícara.",
-    "Aquí puedes contar cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es un paraíso para el café.":
-      "Aqui você pode contar como é a paisagem de Acevedo, o que se vê da fazenda e por que este cantinho do Huila é um paraíso para o café.",
 
+    "Cultivamos y cuidamos nuestras plantas desde la semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
+      "Cultivamos e cuidamos de nossas plantas desde a semente, acompanhando cada etapa do crescimento com dedicação e amor pela terra, tanto que a magia floresce naturalmente.",
+    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes faces.":
+      "Tudo começa no viveiro. Ali escolhemos as melhores sementes e as acompanhamos durante suas primeiras semanas, até que estejam prontas para as próximas fases.",
+    "Después de la siembra y la floración, viene la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
+      "Depois do plantio e da floração, vem a colheita à mão, grão por grão. Cada etapa é feita com paciência, porque sabemos que dela depende o que depois chega à sua xícara.",
+    "Detrás de Canco Café hay una familia soñadora. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos. Somos CANCO, somos familia, somos comunidad.":
+      "Por trás da Canco Café há uma família sonhadora. O conhecimento do café passou de geração em geração, dos avós para os pais e dos pais para os filhos. Somos CANCO, somos família, somos comunidade.",
+    "La finca es el hogar y corazón de Canco star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
+      "A fazenda é o lar e o coração da Canco Star. Entre suas montanhas crescem os cafezais que dão origem a cada grão que chega à sua casa.",
+    "Aquí puedes descubrir cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es una octava maravilla del mundo.":
+      "Aqui você pode descobrir como é a paisagem de Acevedo, o que se vê da fazenda e por que este cantinho do Huila é uma oitava maravilha do mundo.",
     // Tienda
     "Café en grano": "Café em grãos",
     "Café molido": "Café moído",
@@ -216,6 +214,16 @@ const pt = {
     "Finca Los Pinos, Acevedo-Huila": "Fazenda Los Pinos, Acevedo, Huila",
     "Robosen, Shanghái": "Robosen, Xangai",
     "Catedral de La Plata, Buenos Aires": "Catedral de La Plata, Buenos Aires",
+
+    // Around The World: lugares que se escriben igual en este idioma (así el revisor no los marca)
+    "Gigante": "Gigante",
+    "Bogotá": "Bogotá",
+    "Leticia, Amazonas": "Leticia, Amazonas",
+    "Chile": "Chile",
+    "Florencia, Caquetá": "Florencia, Caquetá",
+    "Guadalajara, Jalisco": "Guadalajara, Jalisco",
+    "China": "China",
+    "Argentina": "Argentina",
 
     // Around The World: frases
     "Entre cafetales y colores.": "Entre cafezais e cores.",

@@ -149,27 +149,15 @@ const zh = {
   textos: {
     // Legado y tradición
     "Procesos mágicos": "神奇的工序",
-    "Cultivamos nuestras plantas desde semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
-      "我们从种子开始培育咖啡树，用心与对土地的热爱呵护每一个生长阶段，让奇迹自然绽放。",
     "Semilleros de café": "咖啡育苗圃",
-    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para llegar a la tierra.":
-      "一切从育苗圃开始。我们在那里挑选最好的种子，陪伴它们度过最初的几周，直到它们可以移栽到土地中。",
-    "Después vienen la siembra, la floración y la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
-      "接下来是种植、开花，以及一粒一粒的手工采收。每个环节都耐心完成，因为我们知道，这决定了最终来到你杯中的味道。",
     "La familia Star": "Star 家族",
     "Familias cafeteras con generaciones de experiencia, llevando la tradicion y berraquera del cafe huilense en cada grano.":
       "世代经营咖啡的家族，将乌伊拉咖啡的传统与坚韧注入每一粒咖啡豆。",
     "Familia cafetera trabajando en el cultivo": "在咖啡田里劳作的咖啡农家庭",
-    "Detrás de cada bolsa de Canco Café hay una familia. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos.":
-      "每一袋 Canco Café 的背后都有一个家庭。关于咖啡的知识代代相传，从祖父母传给父母，再从父母传给子女。",
-    "Aquí puedes contar quiénes son, cómo empezó la tradición cafetera de la familia y qué significa para ustedes seguir trabajando la tierra.":
-      "在这里可以讲述他们是谁、家族的咖啡传统如何开始，以及继续耕耘这片土地对你们意味着什么。",
     "La Finca": "庄园",
     "El epicentro mágico y nuestra principal fuente de producción, rodeada de maravillosos paisajes que gritan tradición, naturaleza y vida a los cuatro vientos.":
       "这里是一切神奇的中心，也是我们主要的产地，四周美景环绕，处处洋溢着传统、自然与生命的气息。",
     "Cabañas de la finca entre las montañas": "群山之间的庄园小屋",
-    "La finca es nuestro hogar y el corazón de Canco Café. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
-      "庄园是我们的家，也是 Canco Café 的心脏。在它的群山之间，生长着孕育每一粒咖啡豆的咖啡树。",
     "Aquí puedes contar dónde queda, cómo es un día en la finca y qué la hace especial: su clima, su gente y los paisajes que la rodean.":
       "在这里可以讲述庄园位于何处、庄园里的一天是什么样子，以及它的独特之处：气候、人们和周围的风景。",
     "El Paraiso Huilense": "乌伊拉的天堂",
@@ -178,9 +166,19 @@ const zh = {
     "Montañas del Huila": "乌伊拉的群山",
     "El Huila es tierra de café. Sus montañas, sus valles y su neblina le dan al grano un carácter que se reconoce en cada taza.":
       "乌伊拉是咖啡的故乡。这里的山峦、河谷与薄雾赋予咖啡豆独特的个性，在每一杯中都能品味出来。",
-    "Aquí puedes contar cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es un paraíso para el café.":
-      "在这里可以讲述阿塞韦多的风景、从庄园能看到什么，以及为什么乌伊拉的这一角是咖啡的天堂。",
 
+    "Cultivamos y cuidamos nuestras plantas desde la semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
+      "我们从种子开始种植和呵护咖啡树，用心与对土地的热爱照料每一个生长阶段，让奇迹自然绽放。",
+    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes faces.":
+      "一切从育苗圃开始。我们在那里挑选最好的种子，陪伴它们度过最初的几周，直到它们准备好进入下一个阶段。",
+    "Después de la siembra y la floración, viene la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
+      "种植和开花之后，便是一粒一粒的手工采收。每个环节都耐心完成，因为我们知道，这决定了最终来到你杯中的味道。",
+    "Detrás de Canco Café hay una familia soñadora. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos. Somos CANCO, somos familia, somos comunidad.":
+      "Canco Café 的背后是一个怀揣梦想的家庭。关于咖啡的知识代代相传，从祖父母传给父母，再从父母传给子女。我们是 CANCO，我们是一家人，我们是一个社区。",
+    "La finca es el hogar y corazón de Canco star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
+      "庄园是 Canco Star 的家与心脏。在它的群山之间，生长着孕育每一粒送到你家中的咖啡豆的咖啡树。",
+    "Aquí puedes descubrir cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es una octava maravilla del mundo.":
+      "在这里，你可以发现阿塞韦多的风景、从庄园能看到什么，以及为什么乌伊拉的这一角堪称世界第八大奇迹。",
     // Tienda
     "Café en grano": "咖啡豆",
     "Café molido": "咖啡粉",
