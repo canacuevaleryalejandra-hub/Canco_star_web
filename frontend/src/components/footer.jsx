@@ -24,7 +24,17 @@
 */}
 
 import { Link } from "react-router-dom";
+import { MapPin } from "lucide-react";
 import { useLanguage } from "../i18n/language";
+
+// Ubicación de Acevedo, Huila.
+// MAPA_ENLACE: el mapa que se abre en una pestaña nueva (Bing Maps).
+// MAPA_VISTA: el mapa pequeño del footer (OpenStreetMap: no necesita clave ni cuenta). "bbox" es el
+// rectángulo que se muestra (oeste, sur, este, norte); su centro es el pueblo, donde va el pin dorado.
+const MAPA_ENLACE =
+  "https://www.bing.com/maps/search?mepi=58%7E%7EEmbedded%7ELargeMapLink&ty=18&vdpid=5581724884859355137&v=2&sV=1&qpvt=acevedo+huila&FORM=MIRE&style=r&ppois=1.8070452213287354_-75.88850402832031_Acevedo%2C+Huila%2C+Colombia_%7E&cp=1.807045%7E-75.888660&lvl=21";
+const MAPA_VISTA =
+  "https://www.openstreetmap.org/export/embed.html?bbox=-75.9035%2C1.7990%2C-75.8735%2C1.8150&layer=mapnik";
 
 // Los textos del footer se editan en src/i18n (sección "footer" de cada idioma)
 export function Footer() {
@@ -94,8 +104,44 @@ export function Footer() {
           <h3>{t("footer.contacto")}</h3>
           <ul>
             <li><a href="tel:+573138115079">+57 313 811 5079</a></li>
-            <li><a href="#">{t("footer.ubicacion")}</a></li>
+            <li>
+              <a href={MAPA_ENLACE} target="_blank" rel="noopener noreferrer">
+                {t("footer.ubicacion")}
+                <span className="visually-hidden"> ({t("footer.nuevaPestana")})</span>
+              </a>
+            </li>
           </ul>
+
+          {/* Mapa de Acevedo: es una vista previa (no se arrastra, para no "atrapar" el scroll en
+              el celular). Un clic en cualquier parte abre el mapa completo en una pestaña nueva */}
+          <div className="footer-map">
+            <iframe
+              title={t("footer.mapaTitulo")}
+              src={MAPA_VISTA}
+              loading="lazy"
+              tabIndex={-1}
+              aria-hidden="true"
+            />
+            <MapPin className="footer-map-pin" size={30} aria-hidden="true" />
+            <a
+              className="footer-map-link"
+              href={MAPA_ENLACE}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${t("footer.abrirMapa")}: ${t("footer.ubicacion")} (${t("footer.nuevaPestana")})`}
+            >
+              <span className="footer-map-cta" aria-hidden="true">{t("footer.abrirMapa")} ↗</span>
+            </a>
+            {/* OpenStreetMap pide mostrar sus créditos: como los del mapa quedan recortados, van aquí */}
+            <a
+              className="footer-map-credito"
+              href="https://www.openstreetmap.org/copyright"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              © OpenStreetMap
+            </a>
+          </div>
         </div>
 
       </div>

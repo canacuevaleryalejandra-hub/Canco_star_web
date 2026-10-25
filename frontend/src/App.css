@@ -81,6 +81,7 @@ h3,
 .lightbox-place,
 .lang-code,
 .lang-option,
+.footer-map-cta,
 .splash-enter-btn {
   font-family: var(--fuente-titulos);
 }
@@ -2249,6 +2250,94 @@ h3,
 .footer a:focus-visible {
   outline: 2px solid var(--canco-dorado);
   outline-offset: 3px;
+}
+
+/* Mapa de Acevedo en la columna de contacto. OpenStreetMap es claro: el filtro invierte sus
+   colores (y los gira 180° para que el verde y el azul sigan siendo verde y azul), así queda
+   oscuro como la página. El pin dorado va encima, en el centro, que es donde está el pueblo */
+.footer-map {
+  position: relative;
+  height: 170px;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid var(--canco-linea);
+  border-radius: 12px;
+  background-color: var(--canco-negro);
+  transition: border-color 0.3s ease;
+}
+
+/* El mapa es más grande que su marco y queda centrado: así sus botones de zoom (que aquí no
+   funcionan) y su barra de créditos quedan fuera de la vista, y el pueblo sigue en el centro */
+.footer-map iframe {
+  position: absolute;
+  top: -50px;
+  left: -60px;
+  width: calc(100% + 120px);
+  height: calc(100% + 100px);
+  border: 0;
+  filter: invert(0.92) hue-rotate(180deg) brightness(0.9) contrast(0.9) saturate(0.6);
+  /* Es solo una vista previa: los clics van al enlace de encima */
+  pointer-events: none;
+}
+
+/* El pin apunta con su punta al centro del mapa */
+.footer-map-pin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -100%;
+  color: var(--canco-dorado);
+  fill: rgba(201, 164, 92, 0.25);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  pointer-events: none;
+}
+
+/* Enlace invisible que cubre todo el mapa */
+.footer-map-link {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.footer-map-cta {
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: rgba(18, 22, 23, 0.85);
+  border: 1px solid var(--canco-linea);
+  color: var(--canco-crema);
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Créditos de OpenStreetMap (obligatorios), discretos en la esquina inferior izquierda */
+.footer-map-credito {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
+  color: rgba(243, 238, 228, 0.55);
+  font-size: 0.65rem;
+  text-decoration: none;
+}
+
+.footer-map-credito:hover {
+  color: var(--canco-crema);
+}
+
+.footer-map:hover,
+.footer-map:focus-within {
+  border-color: var(--canco-dorado);
+}
+
+.footer-map:hover .footer-map-cta,
+.footer-map-link:focus-visible .footer-map-cta {
+  color: var(--canco-dorado);
+  border-color: var(--canco-dorado);
 }
 
 /* Redes sociales - edita los enlaces */

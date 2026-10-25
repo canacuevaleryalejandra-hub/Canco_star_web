@@ -4,15 +4,22 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Proyecto
 
-Sitio web de **CANCO STAR**, una marca de café de especialidad de Acevedo, Huila (Colombia). Es una SPA en React 19 + Vite 8, en JavaScript (sin TypeScript). Todo el texto visible está en español.
+Sitio web de **CANCO STAR**, una marca de café de especialidad de Acevedo, Huila (Colombia). El repositorio tiene dos carpetas:
+
+- `frontend/`: la página, una SPA en React 19 + Vite 8, en JavaScript (sin TypeScript). Todo el texto visible está en español, con traducciones (ver "Idiomas"). **Todas las rutas de la sección "Arquitectura" (`src/...`, `public/...`) son relativas a `frontend/`.**
+- `backend/`: la API en PHP (Leaf MVC 4) para la base MySQL `canco`. Es una **copia** de `Desktop/api-canco`, que tiene su propio git con el historial anterior. Ver la sección "Backend".
 
 ## Comandos
 
 ```bash
+cd frontend
 npm run dev       # servidor de desarrollo de Vite
-npm run build     # build de producción en dist/
+npm run build     # build de producción en frontend/dist/
 npm run preview   # servir el build localmente
 npm run lint      # ESLint (flat config: js recommended + react-hooks + react-refresh)
+
+cd backend
+php leaf serve    # inicia la API (necesita composer install, .env y MySQL encendido)
 ```
 
 No hay tests ni un framework de testing configurado.
@@ -31,7 +38,7 @@ No hay tests ni un framework de testing configurado.
   - Como el header es fijo, `[id]` tiene `scroll-margin-top: var(--header-offset)`. Si cambia el alto del header, actualiza `--header-height` y `--header-offset` en `:root` (y en el breakpoint de 768px).
 - **Carrito:** `context/cart.js` (contexto y hook `useCart`) y `context/CartProvider.jsx` (estado). Están en archivos separados para cumplir la regla `react-refresh/only-export-components`. Cada ítem es `{ id, nombre, presentacion, precio, imagen, cantidad }`; el `id` debe incluir la presentación (por ejemplo `grano-250g`). El carrito se guarda en `localStorage` (`canco-carrito`). `CartDrawer.jsx` es el panel lateral: usa `inert` cuando está cerrado, se cierra con Escape o con el fondo y devuelve el foco. Por ahora solo permite quitar productos (no cambiar la cantidad) y todavía no hay pago. `utils/format.js` → `formatPrice(37000)` da `"$ 37.000"`.
 - **Fotos de productos:** están en `public/Products/`: `Canco250` y `Canco500` (las bolsas), `V60` (la cafetera), `Fv60` (los filtros de la V60), `PrensaF` y `Chemex`. Todas terminan en `.jpeg`, pero en realidad son PNG (las bolsas, unos 900 KB cada una), WebP o AVIF (`PrensaF`). Los navegadores las muestran igual, pero si alguna herramienta falla con ellas, esa es la causa.
-- **Precios (confirmados en octubre de 2026):** café en grano y molido, $37.000 en 250 g y en 500 g; V60, $62.000; prensa francesa, $75.000; Chemex, $85.000 (estimado); filtros V60 (caja de 100), $30.000 (aproximado). La base MySQL `canco` de la API PHP (proyecto aparte en `Desktop/api-canco`) tiene precios viejos (250 g = $26.000), no tiene Chemex, filtros ni café molido, y todavía no hay endpoint de productos. Por eso la tienda usa `data/productos.js`.
+- **Precios (confirmados en octubre de 2026):** café en grano y molido, $37.000 en 250 g y en 500 g; V60, $62.000; prensa francesa, $75.000; Chemex, $85.000 (estimado); filtros V60 (caja de 100), $30.000 (aproximado). La base MySQL `canco` de la API PHP (`backend/`) tiene precios viejos (250 g = $26.000), no tiene Chemex, filtros ni café molido, y todavía no hay endpoint de productos. Por eso la tienda usa `data/productos.js`.
 - `src/components/` contiene los componentes reutilizables. Se exportan con nombre (`export function X`) y los nombres de archivo mezclan mayúsculas y minúsculas (`head.jsx`, `Cards.jsx`). Respeta el nombre exacto al importar, porque Vercel distingue mayúsculas y minúsculas y Windows no.
 - **Navegación por secciones:** Inicio, Legado y tradición, Around The World y Contacto Star están en la página principal, una debajo de la otra. Los enlaces usan `<Link to="/#id">`, y `components/ScrollToHash.jsx` escucha la URL y baja con desplazamiento suave al `id`. Así funciona también desde otra página (por ejemplo, desde `/tienda`, `/#familia` vuelve al inicio y baja). Los ids son: `inicio` (hero), `reel`, `legado-y-tradicion` (sección de tarjetas), `procesos`/`familia`/`finca`/`paraiso` (el `slug` de cada tarjeta), `around-the-world`, `contacto-star` (footer), `contacto` y `redes`. Si cambias un id, actualiza `menuData` en `head.jsx` y los enlaces del footer.
 - **Menú desplegable:** las opciones y subopciones salen del array `menuData` en `head.jsx`. Con mouse se abre al pasar por encima; en pantallas táctiles y con teclado, con el botón de flecha. Se cierra al hacer clic fuera o con Escape.
@@ -63,11 +70,20 @@ No hay tests ni un framework de testing configurado.
 - **Legado: reel + tarjetas** (`.legado-layout`): `contents.jsx` pasa el reel a `<Cards reel={<VideoReel />} />`. Es un grid: el reel en una columna a la izquierda (`minmax(240px, 340px)`, `position: sticky` bajo el header) y las tarjetas en 2 columnas a su derecha. Las dos primeras quedan al lado del reel y las otras dos debajo. En ≤1024 px el reel se angosta; en ≤768 px va arriba, centrado y sin sticky; en ≤560 px hay una tarjeta por fila. `#reel` sigue en el reel.
 - **El menú abre la tarjeta:** los enlaces `/#procesos`, `/#familia`, `/#finca` y `/#paraiso` (menú, footer y el botón del hero) bajan a la tarjeta **y abren su ventana**. `Cards.jsx` lo calcula a partir de `useLocation()`: abre la tarjeta del hash salvo que esa navegación (`location.key`) ya se haya cerrado (`dismissedKey`). No usa un `setState` dentro de un efecto, por la regla de react-hooks. En la primera carga (`location.key === "default"`) no se abre, porque la página está detrás del splash.
 
+- **Footer: ubicación:** `footer.jsx` tiene dos constantes arriba. `MAPA_ENLACE` es el link de Bing Maps a Acevedo; lo usan el texto "Acevedo, Huila - Colombia" y el mapa, y abre en una pestaña nueva. `MAPA_VISTA` es el iframe de OpenStreetMap (sin clave), con un `bbox` centrado en el pueblo. El mapa (`.footer-map`) es solo una vista previa: el iframe tiene `pointer-events: none` y es más grande que su marco (`top: -50px`, `left: -60px`), para recortar sus botones de zoom y su barra de créditos. Un enlace invisible (`.footer-map-link`) cubre todo el mapa y lleva a Bing. El filtro `invert + hue-rotate(180deg)` lo vuelve oscuro, y el pin dorado (`MapPin` de lucide) va en el centro. **Los créditos "© OpenStreetMap" son obligatorios por su licencia**: van en `.footer-map-credito`; no los quites.
+
+## Backend
+
+- **Estructura (Leaf MVC):** `public/index.php` es la entrada; `app/routes/index.php` registra `GET /api/users` y `POST /api/users`, que llaman a `app/controllers/UsersControllers.php`; `app/database/conexion.php` conecta con MySQL (`localhost`, `root`, contraseña vacía de XAMPP, base `canco`). `_auth.php` declara rutas `/auth/*` cuyos controladores no existen todavía.
+- **Seguridad:** `GET /api/users` devuelve solo `COLUMNAS_PUBLICAS` (sin contraseña) y `POST /api/users` guarda la contraseña con `password_hash`. Para eso la columna `usuarios.contraseña` debe ser `VARCHAR(255)`: el cambio está en `backend/database/2026-10-25-contrasena-255.sql` y **se aplica a mano en phpMyAdmin** (no lo ejecutes tú). Las contraseñas que ya existen siguen sin encriptar.
+- **No se suben a GitHub** (por `backend/.gitignore`): `.env` (tiene la `APP_KEY` real), `vendor/` (se instala con `composer install`) y `storage/logs`. **El repositorio es público**: nunca pongas una contraseña real en `conexion.php`; usa `.env`.
+- La API no se publica en Vercel; necesita un hosting con PHP y MySQL. La tienda todavía no la usa (sus productos salen de `frontend/src/data/productos.js`).
+
 ## Despliegue
 
-El sitio se despliega en Vercel. Ten en cuenta dos cosas:
-- La carpeta `.vercel/` está dentro de `public/`, así que se copia al build y queda publicada. Debería estar en la raíz y en `.gitignore`.
-- `vercel.json` redirige todas las rutas a `/index.html`, porque `BrowserRouter` lo necesita para que entrar directo a una ruta o recargar la página no dé 404. No lo borres.
+El sitio se despliega en Vercel desde la raíz del repositorio. Ten en cuenta dos cosas:
+- `vercel.json` (en la raíz) le dice a Vercel que instale y compile dentro de `frontend/` (`installCommand`, `buildCommand`), que publique `frontend/dist` (`outputDirectory`) y que redirija todas las rutas a `/index.html`, porque `BrowserRouter` lo necesita para que entrar directo a una ruta o recargar la página no dé 404. No lo borres. Si algún día en Vercel se configura "Root Directory = frontend", este archivo tendría que ir dentro de `frontend/` y sin los `cd frontend`.
+- `.vercel/` (datos del Vercel CLI) está en la raíz y en `.gitignore`. Antes estaba en `public/` y se publicaba con la página.
 
 ## Git
 
