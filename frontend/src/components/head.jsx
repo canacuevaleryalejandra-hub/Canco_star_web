@@ -105,7 +105,7 @@ export function Head() {
         <img className="img-logo" src="/CANCO STAR.jpeg" alt="" />
         <span className="logo-text">
           <span className="logo-name">CANCO</span>
-          <span className="logo-sub">• CAFÉ •</span>
+          <span className="logo-sub">• STAR •</span>
         </span>
       </Link>
 
