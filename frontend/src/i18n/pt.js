@@ -104,6 +104,7 @@ const pt = {
     quitar: "Remover {producto} do carrinho",
     total: "Total",
     nota: "O pagamento on-line estará disponível em breve.",
+    cobroEnPesos: "Os preços em {moneda} são aproximados. O pagamento é feito em pesos colombianos: {precio}.",
   },
 
   tienda: {
@@ -116,6 +117,8 @@ const pt = {
     verTodo: "Ver tudo",
     sinResultados: "Não encontramos produtos para a sua busca.",
     verTienda: "Ver a loja toda",
+    notaMoneda: "Preços aproximados em {moneda}, de acordo com o câmbio do dia. O pagamento é feito em pesos colombianos (COP).",
+    tasas: "Taxas de câmbio",
   },
 
   producto: {
@@ -126,6 +129,8 @@ const pt = {
     agregarUnidad: "Adicionar uma unidade",
     agregar: "Adicionar",
     consultarPrecio: "Consultar preço",
+    aproximado: "Preço aproximado:",
+    precioReal: "Em pesos: {precio}",
   },
 
   footer: {
@@ -168,13 +173,13 @@ const pt = {
 
     "Cultivamos y cuidamos nuestras plantas desde la semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
       "Cultivamos e cuidamos de nossas plantas desde a semente, acompanhando cada etapa do crescimento com dedicação e amor pela terra, tanto que a magia floresce naturalmente.",
-    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes faces.":
+    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes fases.":
       "Tudo começa no viveiro. Ali escolhemos as melhores sementes e as acompanhamos durante suas primeiras semanas, até que estejam prontas para as próximas fases.",
     "Después de la siembra y la floración, viene la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
       "Depois do plantio e da floração, vem a colheita à mão, grão por grão. Cada etapa é feita com paciência, porque sabemos que dela depende o que depois chega à sua xícara.",
     "Detrás de Canco Café hay una familia soñadora. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos. Somos CANCO, somos familia, somos comunidad.":
       "Por trás da Canco Café há uma família sonhadora. O conhecimento do café passou de geração em geração, dos avós para os pais e dos pais para os filhos. Somos CANCO, somos família, somos comunidade.",
-    "La finca es el hogar y corazón de Canco star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
+    "La finca es el hogar y corazón de Canco Star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
       "A fazenda é o lar e o coração da Canco Star. Entre suas montanhas crescem os cafezais que dão origem a cada grão que chega à sua casa.",
     "Aquí puedes descubrir cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es una octava maravilla del mundo.":
       "Aqui você pode descobrir como é a paisagem de Acevedo, o que se vê da fazenda e por que este cantinho do Huila é uma oitava maravilha do mundo.",

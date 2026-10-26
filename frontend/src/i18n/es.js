@@ -108,6 +108,7 @@ const es = {
     quitar: "Quitar {producto} del carrito",
     total: "Total",
     nota: "El pago en línea estará disponible muy pronto.",
+    cobroEnPesos: "Los precios en {moneda} son aproximados. El pago se hace en pesos colombianos: {precio}.",
   },
 
   tienda: {
@@ -120,6 +121,8 @@ const es = {
     verTodo: "Ver todo",
     sinResultados: "No encontramos productos para tu búsqueda.",
     verTienda: "Ver toda la tienda",
+    notaMoneda: "Precios aproximados en {moneda}, según la tasa de cambio del día. El pago se hace en pesos colombianos (COP).",
+    tasas: "Tasas de cambio",
   },
 
   producto: {
@@ -130,6 +133,8 @@ const es = {
     agregarUnidad: "Agregar una unidad",
     agregar: "Agregar",
     consultarPrecio: "Consultar precio",
+    aproximado: "Precio aproximado:",
+    precioReal: "En pesos: {precio}",
   },
 
   footer: {

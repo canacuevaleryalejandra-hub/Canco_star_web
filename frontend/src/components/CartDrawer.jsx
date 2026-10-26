@@ -2,12 +2,13 @@ import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Trash2, X } from "lucide-react";
 import { useCart } from "../context/cart";
-import { formatPrice } from "../utils/format";
+import { FUENTE_TASAS, usePrecio } from "../i18n/moneda";
 import { useLanguage } from "../i18n/language";
 
 // Panel lateral del carrito. Se abre con el ícono del carrito en el header.
 export function CartDrawer() {
   const { t } = useLanguage();
+  const { precio, enPesos, esAproximado, codigo } = usePrecio();
   const { items, total, isOpen, closeCart, removeItem } = useCart();
   const closeButtonRef = useRef(null);
 
@@ -69,7 +70,7 @@ export function CartDrawer() {
                     <p className="cart-item-name">{t.texto(item.nombre)}</p>
                     {item.presentacion && <p className="cart-item-detail">{item.presentacion}</p>}
                     <p className="cart-item-detail">
-                      {item.cantidad} × {formatPrice(item.precio)}
+                      {item.cantidad} × {esAproximado && "≈ "}{precio(item.precio)}
                     </p>
                   </div>
                   <button
@@ -87,8 +88,17 @@ export function CartDrawer() {
             <div className="cart-footer">
               <p className="cart-total">
                 <span>{t("carrito.total")}</span>
-                <span>{formatPrice(total)}</span>
+                <span>{esAproximado && "≈ "}{precio(total)}</span>
               </p>
+              {/* En otra moneda se aclara que el cobro es en pesos y cuánto es */}
+              {esAproximado && (
+                <p className="cart-note cart-note-moneda">
+                  {t("carrito.cobroEnPesos", { moneda: codigo, precio: enPesos(total) })}{" "}
+                  <a href={FUENTE_TASAS.enlace} target="_blank" rel="noopener noreferrer">
+                    {t("tienda.tasas")}: {FUENTE_TASAS.nombre}
+                  </a>
+                </p>
+              )}
               <p className="cart-note">{t("carrito.nota")}</p>
             </div>
           </>
