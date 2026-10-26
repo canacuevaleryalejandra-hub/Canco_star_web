@@ -105,6 +105,7 @@ const zh = {
     quitar: "从购物车中移除{producto}",
     total: "合计",
     nota: "在线支付即将开通。",
+    cobroEnPesos: "以{moneda}显示的价格仅供参考，实际以哥伦比亚比索付款：{precio}。",
   },
 
   tienda: {
@@ -117,6 +118,8 @@ const zh = {
     verTodo: "查看全部",
     sinResultados: "没有找到符合搜索条件的商品。",
     verTienda: "查看全部商品",
+    notaMoneda: "价格按当日汇率换算为{moneda}，仅供参考。实际以哥伦比亚比索（COP）付款。",
+    tasas: "汇率",
   },
 
   producto: {
@@ -127,6 +130,8 @@ const zh = {
     agregarUnidad: "增加一件",
     agregar: "加入购物车",
     consultarPrecio: "咨询价格",
+    aproximado: "大致价格：",
+    precioReal: "比索价格：{precio}",
   },
 
   footer: {
@@ -169,13 +174,13 @@ const zh = {
 
     "Cultivamos y cuidamos nuestras plantas desde la semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
       "我们从种子开始种植和呵护咖啡树，用心与对土地的热爱照料每一个生长阶段，让奇迹自然绽放。",
-    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes faces.":
+    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes fases.":
       "一切从育苗圃开始。我们在那里挑选最好的种子，陪伴它们度过最初的几周，直到它们准备好进入下一个阶段。",
     "Después de la siembra y la floración, viene la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
       "种植和开花之后，便是一粒一粒的手工采收。每个环节都耐心完成，因为我们知道，这决定了最终来到你杯中的味道。",
     "Detrás de Canco Café hay una familia soñadora. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos. Somos CANCO, somos familia, somos comunidad.":
       "Canco Café 的背后是一个怀揣梦想的家庭。关于咖啡的知识代代相传，从祖父母传给父母，再从父母传给子女。我们是 CANCO，我们是一家人，我们是一个社区。",
-    "La finca es el hogar y corazón de Canco star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
+    "La finca es el hogar y corazón de Canco Star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
       "庄园是 Canco Star 的家与心脏。在它的群山之间，生长着孕育每一粒送到你家中的咖啡豆的咖啡树。",
     "Aquí puedes descubrir cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es una octava maravilla del mundo.":
       "在这里，你可以发现阿塞韦多的风景、从庄园能看到什么，以及为什么乌伊拉的这一角堪称世界第八大奇迹。",

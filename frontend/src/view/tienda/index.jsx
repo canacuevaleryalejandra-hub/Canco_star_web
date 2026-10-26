@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 import { ProductCard } from "../../components/ProductCard";
 import { categorias, productos } from "../../data/productos";
 import { useLanguage } from "../../i18n/language";
+import { FUENTE_TASAS, usePrecio } from "../../i18n/moneda";
 
 // "Café Molído" → "cafe molido", para que la búsqueda no dependa de tildes ni mayúsculas
 function normalizar(texto) {
@@ -15,6 +16,7 @@ const nombreCategoria = Object.fromEntries(categorias.map((c) => [c.id, c.nombre
 // /tienda?buscar=v60         → lo que se buscó desde la lupa del header
 export default function Tienda() {
   const { t } = useLanguage();
+  const { esAproximado, codigo } = usePrecio();
   const [searchParams] = useSearchParams();
   const categoria = searchParams.get("categoria");
   const buscar = searchParams.get("buscar")?.trim() ?? "";
@@ -50,6 +52,16 @@ export default function Tienda() {
             </Link>
           ))}
         </nav>
+
+        {/* En otra moneda: aviso de que los precios son aproximados y de dónde salen las tasas */}
+        {esAproximado && (
+          <p className="tienda-moneda">
+            {t("tienda.notaMoneda", { moneda: codigo })}{" "}
+            <a href={FUENTE_TASAS.enlace} target="_blank" rel="noopener noreferrer">
+              {t("tienda.tasas")}: {FUENTE_TASAS.nombre}
+            </a>
+          </p>
+        )}
 
         {buscar && (
           <p className="tienda-busqueda">

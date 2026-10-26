@@ -104,6 +104,7 @@ const en = {
     quitar: "Remove {producto} from cart",
     total: "Total",
     nota: "Online payment will be available very soon.",
+    cobroEnPesos: "Prices in {moneda} are approximate. Payment is made in Colombian pesos: {precio}.",
   },
 
   tienda: {
@@ -116,6 +117,8 @@ const en = {
     verTodo: "See all",
     sinResultados: "We couldn't find any products for your search.",
     verTienda: "See the whole shop",
+    notaMoneda: "Approximate prices in {moneda}, based on today's exchange rate. Payment is made in Colombian pesos (COP).",
+    tasas: "Exchange rates",
   },
 
   producto: {
@@ -126,6 +129,8 @@ const en = {
     agregarUnidad: "Add one",
     agregar: "Add",
     consultarPrecio: "Ask for the price",
+    aproximado: "Approximate price:",
+    precioReal: "In pesos: {precio}",
   },
 
   footer: {
@@ -168,13 +173,13 @@ const en = {
 
     "Cultivamos y cuidamos nuestras plantas desde la semilla, cuidando cada etapa del crecimiento con dedicacion y amor por la tierra, tanto que la magia florece naturalmente.":
       "We grow and care for our plants from the seed, tending every stage of their growth with dedication and love for the land, so much that the magic blooms naturally.",
-    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes faces.":
+    "Todo empieza en el semillero. Allí escogemos las mejores semillas y las acompañamos durante sus primeras semanas, hasta que están listas para las siguientes fases.":
       "It all begins in the seedbed. There we choose the best seeds and look after them during their first weeks, until they are ready for the next stages.",
     "Después de la siembra y la floración, viene la cosecha a mano, grano por grano. Cada etapa se hace con paciencia, porque sabemos que de ella depende lo que luego llega a tu taza.":
       "After planting and flowering comes the harvest, picked by hand, bean by bean. Every stage is done with patience, because we know it shapes what later reaches your cup.",
     "Detrás de Canco Café hay una familia soñadora. El conocimiento del café ha pasado de generación en generación, de los abuelos a los padres y de los padres a los hijos. Somos CANCO, somos familia, somos comunidad.":
       "Behind Canco Café there is a family of dreamers. Coffee know-how has been passed down from generation to generation, from grandparents to parents and from parents to children. We are CANCO, we are family, we are community.",
-    "La finca es el hogar y corazón de Canco star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
+    "La finca es el hogar y corazón de Canco Star. Entre sus montañas crecen los cafetales que dan origen a cada grano que llega a tu casa.":
       "The farm is the home and heart of Canco Star. Among its mountains grow the coffee plants behind every bean that reaches your home.",
     "Aquí puedes descubrir cómo es el paisaje de Acevedo, qué se ve desde la finca y por qué este rincón del Huila es una octava maravilla del mundo.":
       "Here you can discover what the landscape of Acevedo is like, what you can see from the farm and why this corner of Huila is an eighth wonder of the world.",

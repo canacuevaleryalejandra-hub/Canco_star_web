@@ -997,6 +997,27 @@ h3,
   font-weight: 700;
 }
 
+/* Precio real en pesos, debajo del aproximado en otra moneda */
+.product-price-cop {
+  margin-top: -8px;
+  color: var(--canco-texto-suave);
+  font-size: 0.8rem;
+}
+
+/* Aviso de la tienda cuando los precios están en otra moneda */
+.tienda-moneda {
+  max-width: 640px;
+  margin: -10px auto 25px;
+  color: var(--canco-texto-suave);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.tienda-moneda a,
+.cart-note-moneda a {
+  color: var(--canco-teal-claro);
+}
+
 .product-actions {
   display: flex;
   gap: 10px;

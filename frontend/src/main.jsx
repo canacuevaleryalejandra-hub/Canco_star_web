@@ -9,6 +9,7 @@ import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill'
 import flagsFontUrl from 'country-flag-emoji-polyfill/dist/TwemojiCountryFlags.woff2?url'
 import { CartProvider } from './context/CartProvider.jsx'
 import { LanguageProvider } from './i18n/LanguageProvider.jsx'
+import { CurrencyProvider } from './i18n/CurrencyProvider.jsx'
 import App from './App.jsx'
 
 // Windows no dibuja los emojis de banderas (muestra "CO" en vez de 🇨🇴).
@@ -20,9 +21,12 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       {/* Idioma del sitio (español, inglés, portugués o chino): ver src/i18n */}
       <LanguageProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        {/* Tasas de cambio para mostrar los precios en la moneda de cada idioma: ver src/i18n/moneda.js */}
+        <CurrencyProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </CurrencyProvider>
       </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
